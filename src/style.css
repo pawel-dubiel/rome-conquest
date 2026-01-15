@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --roman-red: #8B0000;
+  --roman-gold: #DAA520;
+  --roman-gold-light: #FFD700;
+  --roman-black: #1a1a1a;
+  --roman-marble: #f0f0f0;
+
+  --font-header: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: var(--roman-marble);
+  font-family: var(--font-body);
+}
+
+canvas {
+  display: block;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* UI Components */
+.roman-panel {
+  background: linear-gradient(180deg, rgba(20, 0, 0, 0.9) 0%, rgba(40, 0, 0, 0.95) 100%);
+  border: 2px solid var(--roman-gold);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(139, 0, 0, 0.2);
+  padding: 20px;
+  color: var(--roman-marble);
+  pointer-events: auto;
+}
+
+.roman-btn {
+  pointer-events: auto;
+  background: linear-gradient(180deg, #b22222 0%, #8b0000 100%);
+  border: 1px solid var(--roman-gold);
+  color: var(--roman-gold-light);
+  font-family: var(--font-header);
+  font-weight: 700;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 1px 1px 2px black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.roman-btn:hover {
+  background: linear-gradient(180deg, #cd5c5c 0%, #a52a2a 100%);
+  box-shadow: 0 0 10px var(--roman-gold);
+  transform: translateY(-1px);
+}
+
+.roman-btn:active {
+  transform: translateY(1px);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+  color: var(--roman-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5em;
+}
+
+.stat-label {
+  color: #aaa;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Specific UI Layouts */
+#main-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+#stats-area {
+  display: flex;
+  gap: 20px;
+  font-family: var(--font-header);
+  font-size: 1.2em;
+}
+
+#province-panel {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 300px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.roman-tooltip {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid var(--roman-gold);
+  color: var(--roman-gold-light);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translate(15px, 15px);
+  /* Offset from mouse */
+  white-space: nowrap;
+}
