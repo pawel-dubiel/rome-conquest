@@ -19,4 +19,24 @@ A simple strategy game (more like simple POC to explore simple mechanics) where 
 4.  **End Turn**: Click "End Turn" to collect taxes and let the AI move.
 5.  **Tax**: Click the Tax label (Top Right) to change tax rates. High tax gives more money but lowers happiness.
 
+
+![alt text](image-1.png)
+
+![alt text](image.png)
+
+![alt text](image-2.png)
+
+## Setup
+
+1.  Install dependencies:
+    ```bash
+    npm install
+    ```
+2.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+
 Made with Three.js and TypeScript.
+
+
